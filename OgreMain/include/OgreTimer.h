@@ -28,6 +28,10 @@ THE SOFTWARE.
 
 #ifndef __OGRE_TIMER_H__
 #define __OGRE_TIMER_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
 
 #include "OgrePrerequisites.h"
 #include <chrono>
@@ -59,4 +63,7 @@ namespace Ogre
         uint64_t getMicrosecondsCPU();
     };
 }
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
 #endif

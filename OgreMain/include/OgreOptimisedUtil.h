@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __OptimisedUtil_H__
 #define __OptimisedUtil_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreEdgeListBuilder.h"
@@ -240,5 +245,9 @@ namespace Ogre {
     /** @} */
 
 }
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif  // __OptimisedUtil_H__

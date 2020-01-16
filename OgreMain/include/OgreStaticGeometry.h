@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __StaticGeometry_H__
 #define __StaticGeometry_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreMovableObject.h"
@@ -777,6 +782,10 @@ namespace Ogre {
 }
 
 #include "OgreHeaderSuffix.h"
+
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
 
 #endif
 

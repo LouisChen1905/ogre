@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __RenderSystem_H_
 #define __RenderSystem_H_
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 // Precompiler options
 #include "OgrePrerequisites.h"
@@ -1260,5 +1265,9 @@ namespace Ogre
 }
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif

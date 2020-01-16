@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef _Rectangle2D_H__
 #define _Rectangle2D_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 
@@ -96,6 +101,8 @@ namespace Ogre {
 
 }// namespace
 
+#ifdef _WIN32
+#pragma warning(pop)
 #endif
 
-
+#endif

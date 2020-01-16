@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __Ray_H_
 #define __Ray_H_
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 // Precompiler options
 #include "OgrePrerequisites.h"
@@ -152,4 +157,8 @@ namespace Ogre {
     /** @} */
 
 }
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 #endif

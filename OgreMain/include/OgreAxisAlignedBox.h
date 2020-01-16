@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __AxisAlignedBox_H_
 #define __AxisAlignedBox_H_
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include <array>
 
@@ -808,5 +813,9 @@ namespace Ogre {
     /** @} */
     /** @} */
 } // namespace Ogre
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif

@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __PatchSurface_H__
 #define __PatchSurface_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 
@@ -238,5 +243,9 @@ namespace Ogre {
 } // namespace
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif

@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __InstanceBatch_H__
 #define __InstanceBatch_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreRenderOperation.h"
@@ -363,5 +368,9 @@ namespace Ogre
 } // namespace Ogre
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif // __InstanceBatch_H__

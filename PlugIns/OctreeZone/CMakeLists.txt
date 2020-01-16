@@ -23,6 +23,11 @@ generate_export_header(Plugin_OctreeZone
     EXPORT_MACRO_NAME _OgreOctreeZonePluginExport
     EXPORT_FILE_NAME ${PROJECT_BINARY_DIR}/include/OgreOctreeZonePrerequisites.h)
 
+if (UNIX)
+  set_property(TARGET Plugin_OctreeZone APPEND PROPERTY
+    INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/${OGRE_LIB_DIRECTORY}/OGRE)
+endif ()
+
 ogre_config_framework(Plugin_OctreeZone)
 
 ogre_config_plugin(Plugin_OctreeZone)

@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __AutoParamDataSource_H_
 #define __AutoParamDataSource_H_
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreCommon.h"
@@ -267,5 +272,9 @@ namespace Ogre {
     /** @} */
     /** @} */
 }
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif

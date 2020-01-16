@@ -34,6 +34,11 @@ THE SOFTWARE.
 
 #ifndef __OgreStableHeaders__
 #define __OgreStableHeaders__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgreConfig.h"
 #include "OgreExports.h"
@@ -108,5 +113,9 @@ THE SOFTWARE.
 #if OGRE_NO_ZIP_ARCHIVE == 0
 #   include "OgreZip.h"
 #endif
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif 

@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __Vector_H__
 #define __Vector_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 
 #include "OgrePrerequisites.h"
@@ -910,4 +915,8 @@ namespace Ogre
     /** @} */
 
 }
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 #endif

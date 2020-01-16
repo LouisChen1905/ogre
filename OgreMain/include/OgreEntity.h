@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __Entity_H__
 #define __Entity_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreCommon.h"
@@ -916,5 +921,9 @@ namespace Ogre {
 } // namespace Ogre
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif // __Entity_H__

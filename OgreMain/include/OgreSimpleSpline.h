@@ -28,6 +28,11 @@ THE SOFTWARE.
 
 #ifndef __SimpleSpline_H__
 #define __SimpleSpline_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreMatrix4.h"
@@ -134,6 +139,10 @@ namespace Ogre {
 
 #include "OgreHeaderSuffix.h"
 
+
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
 
 #endif
 

@@ -28,6 +28,10 @@ THE SOFTWARE.
 
 #ifndef __OverlayProfileSessionListener_H__
 #define __OverlayProfileSessionListener_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
 
 #include "OgreOverlayPrerequisites.h"
 #include "OgreProfiler.h"
@@ -151,4 +155,8 @@ namespace Ogre  {
         DisplayMode mDisplayMode;
     };
 }
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 #endif

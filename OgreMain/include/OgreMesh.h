@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __Mesh_H__
 #define __Mesh_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 
@@ -1039,5 +1044,9 @@ namespace Ogre {
 } // namespace Ogre
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif // __Mesh_H__

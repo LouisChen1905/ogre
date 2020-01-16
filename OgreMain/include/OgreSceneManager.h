@@ -29,6 +29,11 @@ Torus Knot Software Ltd.
 -------------------------------------------------------------------------*/
 #ifndef __SceneManager_H__
 #define __SceneManager_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 // Precompiler options
 #include "OgrePrerequisites.h"
@@ -3586,5 +3591,9 @@ namespace Ogre {
 } // Namespace
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif

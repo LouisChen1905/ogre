@@ -27,6 +27,11 @@ Copyright (c) 2000-2014 Torus Knot Software Ltd
 */
 #ifndef __GpuProgramParams_H_
 #define __GpuProgramParams_H_
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 // Precompiler options
 #include "OgrePrerequisites.h"
@@ -2083,5 +2088,9 @@ namespace Ogre {
 }
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif

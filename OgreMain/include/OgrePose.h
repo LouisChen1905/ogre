@@ -27,6 +27,11 @@ THE SOFTWARE.
 */
 #ifndef __OGRE_POSE_H
 #define __OGRE_POSE_H
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreCommon.h"
@@ -139,5 +144,9 @@ namespace Ogre {
 }
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif

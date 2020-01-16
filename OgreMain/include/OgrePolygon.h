@@ -28,6 +28,11 @@ THE SOFTWARE.
 */
 #ifndef __Polygon_H__
 #define __Polygon_H__
+#ifdef _WIN32
+#pragma warning(push)
+#pragma warning(disable:4251)
+#endif
+
 
 #include "OgrePrerequisites.h"
 #include "OgreVector3.h"
@@ -144,5 +149,9 @@ namespace Ogre
 }
 
 #include "OgreHeaderSuffix.h"
+#ifdef _WIN32
+#pragma warning(pop)
+#endif
+
 
 #endif
